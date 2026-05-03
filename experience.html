@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Experience & Certifications of Tshifhungu Matsheketsheke">
-  <title>Experience | Tshifhungu Matsheketsheke</title>
+  <meta name="description" content="Experience, Hackathons & Certifications of Tshifhungu Matsheketsheke">
+  <title>Certificates | Tshifhungu Matsheketsheke</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,48 +13,120 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYVY48TLY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYVY48TLY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VTYVY48TLY');
+  </script>
 
-  gtag('config', 'G-VTYVY48TLY');
-</script>
+  <!-- IMAGE PLACEHOLDER AND MODAL CSS -->
+  <style>
+    /* Placeholder Image Styles */
+    .certificate-placeholder {
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(135deg, var(--light-secondary) 0%, var(--light-bg) 100%);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      border: 2px dashed var(--border-color);
+      transition: all 0.3s ease;
+    }
+    .certificate-placeholder i {
+      font-size: 3rem;
+      color: var(--primary-color);
+      opacity: 0.5;
+    }
+    .certificate-card:hover .certificate-placeholder {
+      border-color: var(--primary-color);
+      background: var(--light-bg);
+    }
 
+    /* Full Screen Modal Styles */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      position: relative;
+      animation: modalFadeIn 0.3s ease;
+    }
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      max-height: 80vh;
+      object-fit: contain;
+    }
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: color 0.3s ease;
+    }
+    .modal-close:hover {
+      color: var(--primary-color);
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
 </head>
 
 <body>
   <!-- Navigation -->
-  <!-- Navigation -->
-<nav class="navbar">
-  <div class="container nav-container">
-    <a href="index.html" class="logo">
-      <div class="logo-text">TM</div>
-      <div class="logo-name full">Tshifhungu Matsheketsheke</div>
-      
-    </a>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
-      <li><a href="experience.html" class="nav-link"><i class="fas fa-trophy"></i> Experience</a></li>
-      <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-      </button>
-      <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-text">TM</div>
+        <div class="logo-name full">Tshifhungu Matsheketsheke</div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="experience.html" class="nav-link active"><i class="fas fa-trophy"></i> Certificates</a></li>
+        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-  <!-- Experience Hero -->
+  <!-- Hero Section -->
   <section class="section hero-section">
     <div class="container">
       <div class="experience-hero">
@@ -72,10 +144,10 @@
             </div>
             <div class="stat">
               <span class="stat-number" data-count="2">0</span>
-              <span class="stat-label">Internships</span>
+              <span class="stat-label">Hackathon Certs</span>
             </div>
             <div class="stat">
-              <span class="stat-number" data-count="10">0</span>
+              <span class="stat-number" data-count="12">0</span>
               <span class="stat-label">Projects</span>
             </div>
           </div>
@@ -100,102 +172,87 @@
       </div>
       
       <div class="hackathons-grid">
-        <div class="hackathon-card">
-          <div class="hackathon-header">
-            <span class="hackathon-badge first-place">First Place</span>
-            <span class="hackathon-year">2023</span>
-          </div>
-          <h3>University Tech Innovation Hackathon</h3>
-          <p class="hackathon-description">Led a team of 4 to develop an AI-powered study assistant for students with learning disabilities. Implemented natural language processing for content summarization and speech-to-text functionality.</p>
-          <div class="hackathon-tech">
-            <span>Python</span>
-            <span>TensorFlow</span>
-            <span>Flask</span>
-            <span>React</span>
-          </div>
-          <div class="hackathon-achievements">
-            <div class="achievement">
-              <i class="fas fa-users"></i>
-              <span>Team Leadership</span>
-            </div>
-            <div class="achievement">
-              <i class="fas fa-brain"></i>
-              <span>AI Implementation</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="hackathon-card">
-          <div class="hackathon-header">
-            <span class="hackathon-badge finalist">Finalist</span>
-            <span class="hackathon-year">2023</span>
-          </div>
-          <h3>National Data Science Competition</h3>
-          <p class="hackathon-description">Developed a predictive model for student academic performance using machine learning algorithms. Achieved 92% accuracy in predicting at-risk students based on historical data.</p>
-          <div class="hackathon-tech">
-            <span>Python</span>
-            <span>Scikit-learn</span>
-            <span>Pandas</span>
-            <span>Matplotlib</span>
-          </div>
-          <div class="hackathon-achievements">
-            <div class="achievement">
-              <i class="fas fa-chart-line"></i>
-              <span>92% Accuracy</span>
-            </div>
-            <div class="achievement">
-              <i class="fas fa-database"></i>
-              <span>Data Analysis</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="hackathon-card">
-          <div class="hackathon-header">
-            <span class="hackathon-badge second-place">Second Place</span>
-            <span class="hackathon-year">2022</span>
-          </div>
-          <h3>Code for Social Good Hackathon</h3>
-          <p class="hackathon-description">Created a web platform connecting volunteers with local community service opportunities. Featured geolocation matching, scheduling, and impact tracking.</p>
-          <div class="hackathon-tech">
-            <span>JavaScript</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-            <span>Mapbox API</span>
-          </div>
-          <div class="hackathon-achievements">
-            <div class="achievement">
-              <i class="fas fa-handshake"></i>
-              <span>Social Impact</span>
-            </div>
-            <div class="achievement">
-              <i class="fas fa-map-marked-alt"></i>
-              <span>Geolocation</span>
-            </div>
-          </div>
-        </div>
-        
+        <!-- 1. Geekulcha Annual Hackathon -->
         <div class="hackathon-card">
           <div class="hackathon-header">
             <span class="hackathon-badge participant">Participant</span>
-            <span class="hackathon-year">2022</span>
+            <span class="hackathon-year">2024</span>
           </div>
-          <h3>University Coding Marathon</h3>
-          <p class="hackathon-description">Competed in 24-hour coding challenge solving algorithmic problems and developing a minimum viable product for a given prompt under time constraints.</p>
+          <h3>Geekulcha Annual Hackathon</h3>
+          <p class="hackathon-description">
+            A 2-day intensive hackathon where I collaborated with a team to solve real-world challenges using technology. 
+            Focused on building innovative solutions under time constraints while networking with industry professionals.
+          </p>
           <div class="hackathon-tech">
-            <span>Java</span>
-            <span>Python</span>
-            <span>HTML/CSS</span>
-            <span>JavaScript</span>
+            <span>Team Collaboration</span>
+            <span>Rapid Prototyping</span>
+            <span>Problem Solving</span>
           </div>
           <div class="hackathon-achievements">
             <div class="achievement">
               <i class="fas fa-clock"></i>
-              <span>24-Hour Challenge</span>
+              <span>2 Days</span>
             </div>
             <div class="achievement">
-              <i class="fas fa-code"></i>
-              <span>Algorithmic Problems</span>
+              <i class="fas fa-users"></i>
+              <span>Team Event</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 2. Univen x CSIR Cybersecure Tech Hackathon -->
+        <div class="hackathon-card">
+          <div class="hackathon-header">
+            <span class="hackathon-badge finalist">Certificate Earned</span>
+            <span class="hackathon-year">2024</span>
+          </div>
+          <h3>Univen x CSIR Cybersecure Tech Hackathon</h3>
+          <p class="hackathon-description">
+            A 3-day cybersecurity-focused hackathon organized by the University of Venda in partnership with CSIR. 
+            Developed security solutions and participated in workshops on cyber threats and secure coding practices. 
+            Earned a certificate of participation for this intensive event.
+          </p>
+          <div class="hackathon-tech">
+            <span>Cybersecurity</span>
+            <span>Secure Coding</span>
+            <span>Threat Analysis</span>
+          </div>
+          <div class="hackathon-achievements">
+            <div class="achievement">
+              <i class="fas fa-clock"></i>
+              <span>3 Days</span>
+            </div>
+            <div class="achievement">
+              <i class="fas fa-certificate"></i>
+              <span>Certificate Earned</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 3. Telkom 10x Hackathon -->
+        <div class="hackathon-card">
+          <div class="hackathon-header">
+            <span class="hackathon-badge participant">Participant</span>
+            <span class="hackathon-year">2024</span>
+          </div>
+          <h3>Telkom 10x Hackathon</h3>
+          <p class="hackathon-description">
+            A 2-day hackathon event focused on developing innovative solutions for government service delivery. 
+            Built a service reporting system for communities to report infrastructure issues, presented to Telkom executives.
+          </p>
+          <div class="hackathon-tech">
+            <span>Web Development</span>
+            <span>Firebase</span>
+            <span>Government Tech</span>
+          </div>
+          <div class="hackathon-achievements">
+            <div class="achievement">
+              <i class="fas fa-clock"></i>
+              <span>2 Days</span>
+            </div>
+            <div class="achievement">
+              <i class="fas fa-laptop-code"></i>
+              <span>Project Development</span>
             </div>
           </div>
         </div>
@@ -204,121 +261,118 @@
   </section>
 
   <!-- Certifications Section -->
-  <section class="section" style="background-color: var(--light-secondary);">
+  <section id="certifications" class="section" style="background-color: var(--light-secondary);">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Certifications</h2>
-        <p class="section-subtitle">Professional certifications and completed courses</p>
+        <p class="section-subtitle">Professional certifications, hackathon certificates, and completed courses</p>
       </div>
       
       <div class="certifications-grid">
-        <div class="certification-card">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <i class="fab fa-google"></i>
-            </div>
-            <div class="certification-info">
-              <span class="certification-issuer">Google</span>
-              <span class="certification-date">2023</span>
-            </div>
-          </div>
-          <h3>Data Engineering on Google Cloud</h3>
-          <p class="certification-description">Comprehensive training on building data processing systems on Google Cloud Platform, including BigQuery, Dataflow, and Pub/Sub.</p>
-          <a href="#" class="certification-link">
-            <span>View Certificate</span>
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
         
+        <!-- 1. Hackathon Certificate - Geekulcha -->
         <div class="certification-card">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <i class="fab fa-ibm"></i>
-            </div>
-            <div class="certification-info">
-              <span class="certification-issuer">IBM</span>
-              <span class="certification-date">2023</span>
-            </div>
+          <div class="certificate-placeholder" onclick="openModal('images/certificates/MatsheketshekeTJ_Geekulcha.jpg')">
+            <img src="images/certificates/MatsheketshekeTJ_Geekulcha.jpg" alt="Geekulcha Hackathon Certificate" style="width: 100%; height: auto; border-radius: 8px;">
           </div>
-          <h3>Python for Data Science</h3>
-          <p class="certification-description">Mastered data analysis, visualization, and machine learning using Python libraries like Pandas, NumPy, and Scikit-learn.</p>
-          <a href="#" class="certification-link">
+          <div class="certification-header">
+           
+
+          </div>
+          <h3>Annual Hackathon Certificate - Geekulcha</h3>
+          <p class="certification-description">Certificate of participation for completing the 2-day Geekulcha Annual Hackathon, demonstrating teamwork and rapid prototyping skills.</p>
+          <a href="#" class="certification-link" onclick="openModal('images/certificates/MatsheketshekeTJ_Geekulcha.jpg'); return false;">
             <span>View Certificate</span>
             <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
-        
+
+        <!-- 2. Hackathon Certificate - Univen x CSIR -->
         <div class="certification-card">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <i class="fab fa-aws"></i>
-            </div>
-            <div class="certification-info">
-              <span class="certification-issuer">AWS</span>
-              <span class="certification-date">2022</span>
-            </div>
+          <div class="certificate-placeholder" onclick="openModal('images/certificates/MatsheketshekeTJ_CSIRHACKATHON.jpg')">
+           <img src="images/certificates/MatsheketshekeTJ_CSIRHACKATHON.jpg" alt="Univen x CSIR Hackathon Certificate" style="width: 100%; height: auto; border-radius: 8px;">
           </div>
-          <h3>AWS Cloud Practitioner</h3>
-          <p class="certification-description">Fundamental understanding of AWS Cloud concepts, services, security, architecture, pricing, and support.</p>
-          <a href="#" class="certification-link">
+          <div class="certification-header">
+           
+          </div>
+          <h3>Cybersecure Tech Hackathon Certificate</h3>
+          <p class="certification-description">Certificate earned for participating in the 3-day cybersecurity hackathon hosted by University of Venda and CSIR.</p>
+          <a href="#" class="certification-link" onclick="openModal('images/certificates/MatsheketshekeTJ_CSIRHACKATHON.jpg'); return false;">
             <span>View Certificate</span>
             <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
-        
+
+        <!-- 3. Career Essentials in Software Engineering (Microsoft & LinkedIn) -->
         <div class="certification-card">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <div class="certification-info">
-              <span class="certification-issuer">freeCodeCamp</span>
-              <span class="certification-date">2022</span>
-            </div>
+          <div class="certificate-placeholder" onclick="openModal('images/certificates/MatsheketshekeTJ_SoftwareEngineering_Cert.jpg')">
+            <img src="images/certificates/MatsheketshekeTJ_SoftwareEngineering_Cert.jpg" alt="Career Essentials in Software Engineering Certificate" style="width: 100%; height: auto; border-radius: 8px;">
           </div>
-          <h3>Full Stack Web Development</h3>
-          <p class="certification-description">Completed 300+ hours of coursework covering HTML, CSS, JavaScript, React, Node.js, databases, and authentication.</p>
-          <a href="#" class="certification-link">
+          <div class="certification-header">
+            
+          </div>
+          <h3>Career Essentials in Software Engineering</h3>
+          <p class="certification-description">Comprehensive certification covering software development fundamentals, agile methodologies, version control, and career readiness.</p>
+          <a href="#" class="certification-link" onclick="openModal('images/certificates/MatsheketshekeTJ_SoftwareEngineering_Cert.jpg'); return false;">
             <span>View Certificate</span>
             <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
-        
+
+        <!-- 4. Programming Beyond Fundamentals in Python (LinkedIn) -->
         <div class="certification-card">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <i class="fas fa-university"></i>
-            </div>
-            <div class="certification-info">
-              <span class="certification-issuer">University of Venda</span>
-              <span class="certification-date">2022</span>
-            </div>
+          <div class="certificate-placeholder" onclick="openModal('images/certificates/MatsheketshekeTJ_Programming_Cert.jpg')">
+            <img src="images/certificates/MatsheketshekeTJ_Programming_Cert.jpg" alt="Programming Beyond Fundamentals in Python Certificate" style="width: 100%; height: auto; border-radius: 8px;">
           </div>
-          <h3>Advanced Algorithms & Data Structures</h3>
-          <p class="certification-description">University certification for excellence in advanced algorithm design, analysis, and implementation.</p>
-          <a href="#" class="certification-link">
+          <div class="certification-header">
+            
+          </div>
+          <h3>Programming Beyond Fundamentals in Python</h3>
+          <p class="certification-description">Advanced Python programming certification covering object-oriented programming, data structures, and real-world application development.</p>
+          <a href="#" class="certification-link" onclick="openModal('images/certificates/MatsheketshekeTJ_Programming_Cert.jpg'); return false;">
             <span>View Certificate</span>
             <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
-        
+
+        <!-- 5. Azure Cloud Fundamentals (Microsoft Learn) -->
         <div class="certification-card">
-          <div class="certification-header">
-            <div class="certification-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="certification-info">
-              <span class="certification-issuer">Coursera</span>
-              <span class="certification-date">2021</span>
-            </div>
+          <div class="certificate-placeholder" onclick="openModal('assets/certs/azure-fundamentals.jpg')">
+            <img src="assets/certs/azure-fundamentals.jpg" alt="Azure Cloud Fundamentals Certificate" style="width: 100%; height: auto; border-radius: 8px;">
           </div>
-          <h3>Database Management Essentials</h3>
-          <p class="certification-description">Comprehensive course covering database design, SQL, normalization, transactions, and database administration.</p>
-          <a href="#" class="certification-link">
+          <div class="certification-header">
+            
+          </div>
+          <h3>Azure Cloud Fundamentals</h3>
+          <p class="certification-description">Foundational certification in Microsoft Azure covering cloud concepts, Azure services, security, pricing, and support.</p>
+          <a href="#" class="certification-link" onclick="openModal('assets/certs/azure-fundamentals.jpg'); return false;">
             <span>View Certificate</span>
             <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
+
+        <!-- 6. Introduction to Data Engineering in Azure -->
+        <div class="certification-card">
+          <div class="certificate-placeholder" onclick="openModal('images/certificates/Screenshot 2026-05-03 202724.png')">
+            <img src="images/certificates/Screenshot 2026-05-03 202724.png" alt="Introduction to Data Engineering in Azure Certificate" style="width: 100%; height: auto; border-radius: 8px;">
+          </div>
+          <div class="certification-header">
+            <div class="certification-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="certification-info">
+              <span class="certification-issuer">Microsoft Learn</span>
+              <span class="certification-date">2024</span>
+            </div>
+          </div>
+          <h3>Introduction to Data Engineering in Azure</h3>
+          <p class="certification-description">Specialized certification covering data engineering concepts on Azure including data storage, processing, and pipelines.</p>
+          <a href="https://learn.microsoft.com/en-us/users/tshifhungujonathanmatsheketsheke-7525/achievements/37m6x9fh?ref=https%3A%2F%2Fwww.linkedin.com%2F">
+            <span>View Badge</span>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -341,7 +395,7 @@
           <div class="learning-projects">
             <span>Web Applications</span>
             <span>Data Pipelines</span>
-            <span>Mobile Apps</span>
+            <span>Automation</span>
           </div>
         </div>
         
@@ -352,9 +406,9 @@
           <h3>Complete Online Courses</h3>
           <p>Staying updated with industry trends and tools through structured learning on various platforms.</p>
           <div class="learning-platforms">
-            <span>Coursera</span>
-            <span>Udemy</span>
-            <span>Pluralsight</span>
+            <span>Microsoft Learn</span>
+            <span>LinkedIn Learning</span>
+            <span>Cloud Skills</span>
           </div>
         </div>
         
@@ -377,10 +431,9 @@
         <div class="current-learning">
           <h4>Currently Learning:</h4>
           <div class="current-tech">
-            <span>AWS Services</span>
-            <span>Docker & Kubernetes</span>
-            <span>Advanced Python</span>
-            <span>React Native</span>
+            <span>Advanced Data Engineering</span>
+            <span>Cloud Architecture</span>
+            <span>DevOps Practices</span>
           </div>
         </div>
       </div>
@@ -424,9 +477,9 @@
               <a href="projects.html" class="footer-link">Projects</a>
             </div>
             <div class="link-column">
-              <a href="experience.html" class="footer-link">Experience</a>
+              <a href="experience.html" class="footer-link">Certificates</a>
               <a href="contact.html" class="footer-link">Contact</a>
-              <a href="https://github.com" target="_blank" class="footer-link">GitHub</a>
+              <a href="https://github.com/TshifhunguCodes" target="_blank" class="footer-link">GitHub</a>
             </div>
           </div>
         </div>
@@ -443,7 +496,7 @@
       
       <div class="footer-bottom">
         <div class="footer-social">
-          <a href="https://github.com" target="_blank" class="social-icon">
+          <a href="https://github.com/TshifhunguCodes" target="_blank" class="social-icon">
             <i class="fab fa-github"></i>
           </a>
           <a href="https://linkedin.com" target="_blank" class="social-icon">
@@ -466,6 +519,45 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <!-- Full Screen Image Modal -->
+  <div class="modal-overlay" id="imageModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <img id="modalImage" src="" alt="Certificate">
+    </div>
+  </div>
+
   <script src="js/script.js"></script>
+  
+  <!-- Modal JavaScript -->
+  <script>
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on click outside image
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
