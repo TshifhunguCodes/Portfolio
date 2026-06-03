@@ -353,4 +353,92 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+  
+  // ==================== FEATURED PROJECTS CAROUSEL ====================
+  const track = document.getElementById('carouselTrack');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('carouselDots');
+  
+  if (track && prevBtn && nextBtn && dotsContainer) {
+    const cards = Array.from(track.querySelectorAll('.carousel-card'));
+    let currentSlide = 0;
+
+    function getCardsPerView() {
+      if (window.innerWidth <= 768) return 1;
+      if (window.innerWidth <= 1100) return 2;
+      return 3;
+    }
+
+    function getGap() {
+      const styles = window.getComputedStyle(track);
+      return parseFloat(styles.columnGap || styles.gap) || 0;
+    }
+
+    function getTotalSlides() {
+      return Math.max(cards.length - getCardsPerView() + 1, 1);
+    }
+
+    function renderDots() {
+      const totalSlides = getTotalSlides();
+      dotsContainer.innerHTML = '';
+
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === currentSlide ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.addEventListener('click', function() {
+          goToSlide(i);
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function goToSlide(index) {
+      const totalSlides = getTotalSlides();
+      currentSlide = (index + totalSlides) % totalSlides;
+      const cardWidth = cards[0] ? cards[0].getBoundingClientRect().width : 0;
+      const offset = currentSlide * (cardWidth + getGap());
+      track.style.transform = 'translateX(-' + offset + 'px)';
+      
+      // Update dots
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    renderDots();
+    goToSlide(0);
+    
+    prevBtn.addEventListener('click', function() {
+      goToSlide(currentSlide - 1);
+    });
+    
+    nextBtn.addEventListener('click', function() {
+      goToSlide(currentSlide + 1);
+    });
+    
+    // Auto-advance carousel every 5 seconds
+    let autoSlide = setInterval(function() {
+      goToSlide(currentSlide + 1);
+    }, 5000);
+    
+    // Pause on hover
+    track.addEventListener('mouseenter', function() {
+      clearInterval(autoSlide);
+    });
+    
+    track.addEventListener('mouseleave', function() {
+      autoSlide = setInterval(function() {
+        goToSlide(currentSlide + 1);
+      }, 5000);
+    });
+    
+    // Handle resize
+    window.addEventListener('resize', function() {
+      currentSlide = Math.min(currentSlide, getTotalSlides() - 1);
+      renderDots();
+      goToSlide(currentSlide);
+    });
+  }
 });

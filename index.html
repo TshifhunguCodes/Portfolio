@@ -81,7 +81,7 @@
           </div>
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-number" data-count="12">0</span>
+              <span class="stat-number" data-count="13">0</span>
               <span class="stat-label">Projects</span>
             </div>
             <div class="stat">
@@ -89,7 +89,7 @@
               <span class="stat-label">Hackathons</span>
             </div>
             <div class="stat">
-              <span class="stat-number" data-count="5">0</span>
+              <span class="stat-number" data-count="17">0</span>
               <span class="stat-label">Certifications</span>
             </div>
           </div>
@@ -193,7 +193,7 @@
             <li><i class="fas fa-check"></i> Full-Stack Web Development</li>
             <li><i class="fas fa-check"></i> JavaScript, CSS, HTML</li>
             <li><i class="fas fa-check"></i> REST APIs & Authentication</li>
-            <li><i class="fas fa-check"></i> Mobile App Development</li>
+            <li><i class="fas fa-check"></i> Cloud Databases</li>
           </ul>
         </div>
         
@@ -213,7 +213,7 @@
     </div>
   </section>
 
-  <!-- Featured Projects Preview -->
+  <!-- Featured Projects Carousel -->
   <section class="section featured-projects">
     <div class="container">
       <div class="section-header">
@@ -222,52 +222,101 @@
       </div>
       
       <div class="projects-preview">
-        <div class="project-card">
-          <div class="project-image">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Secure Authentication System</h3>
-            <p class="project-description">Full-stack web application with secure user authentication, password hashing with bcrypt and OAuth 2.0 integration using Python.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Psycopg</span>
-              <span>Flask</span>
-              <span>SQL</span>
+        <div class="carousel-container">
+          <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          
+          <div class="carousel-track" id="carouselTrack">
+            <!-- 1. Secure Authentication System -->
+            <div class="carousel-card">
+              <div class="carousel-card-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="carousel-card-content">
+                <h3>Secure Authentication System</h3>
+                <p>Full-stack web application with secure user authentication, password hashing with bcrypt and OAuth 2.0 integration using Python.</p>
+                <div class="carousel-card-tech">
+                  <span>Python</span>
+                  <span>Psycopg</span>
+                  <span>Flask</span>
+                  <span>SQL</span>
+                </div>
+                <div class="carousel-card-links">
+                  <a href="projects.html" class="carousel-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="carousel-card-badge">Latest</div>
             </div>
-            <div class="project-links">
-              <a href="projects.html" class="project-link">
-                View Details <i class="fas fa-arrow-right"></i>
-              </a>
+            
+            <!-- 2. Student Grade Book System -->
+            <div class="carousel-card">
+              <div class="carousel-card-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="carousel-card-content">
+                <h3>Student Grade Book System</h3>
+                <p>Comprehensive system for tracking student grades, assignments, and academic performance with JavaFX and MySQL.</p>
+                <div class="carousel-card-tech">
+                  <span>JavaFX</span>
+                  <span>JDBC</span>
+                  <span>MySQL</span>
+                </div>
+                <div class="carousel-card-links">
+                  <a href="projects.html" class="carousel-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="carousel-card-badge">Featured</div>
+            </div>
+            
+            <!-- 3. Autonomous Quant Research System -->
+            <div class="carousel-card">
+              <div class="carousel-card-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="carousel-card-content">
+                <h3>Autonomous Quant Research System</h3>
+                <p>AI-powered quantitative research system for building algorithmic trading strategies using machine learning and data analysis. Explores predictive modeling and financial data processing.</p>
+                <div class="carousel-card-tech">
+                  <span>Python</span>
+                  <span>Machine Learning</span>
+                  <span>Quantitative Analysis</span>
+                  <span>Data Processing</span>
+                </div>
+                <div class="carousel-card-links">
+                  <a href="projects.html" class="carousel-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="carousel-card-badge">AI Research</div>
+            </div>
+            
+            <!-- 4. Multi-Format Data Extraction Pipeline -->
+            <div class="carousel-card">
+              <div class="carousel-card-icon">
+                <i class="fas fa-file-export"></i>
+              </div>
+              <div class="carousel-card-content">
+                <h3>Multi-Format Data Extraction Pipeline</h3>
+                <p>ETL pipeline designed to extract data from multiple file formats (CSV, JSON, TXT), transform with business logic, and load into PostgreSQL with validation and error handling.</p>
+                <div class="carousel-card-tech">
+                  <span>Python</span>
+                  <span>Pandas</span>
+                  <span>PostgreSQL</span>
+                  <span>ETL</span>
+                </div>
+                <div class="carousel-card-links">
+                  <a href="projects.html" class="carousel-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="project-badge">
-            <span>Latest</span>
-          </div>
+          
+          <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
         
-        <div class="project-card">
-          <div class="project-image">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Student Grade Book System</h3>
-            <p class="project-description">Comprehensive system for tracking student grades, assignments, and academic performance with JavaFX and MySQL.</p>
-            <div class="project-tech">
-              <span>JavaFX</span>
-              <span>JDBC</span>
-              <span>MySQL</span>
-            </div>
-            <div class="project-links">
-              <a href="projects.html" class="project-link">
-                View Details <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="project-badge">
-            <span>Featured</span>
-          </div>
-        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
       
       <div class="text-center">
@@ -317,7 +366,7 @@
             <div class="link-column">
               <a href="experience.html" class="footer-link">Experience</a>
               <a href="contact.html" class="footer-link">Contact</a>
-              <a href="https://github.com" target="_blank" class="footer-link">GitHub</a>
+          <a href="https://github.com/TshifhunguCodes" target="_blank" class="footer-link">GitHub</a>
             </div>
           </div>
         </div>
@@ -333,17 +382,17 @@
       
       <div class="footer-bottom">
         <div class="footer-social">
-          <a href="https://github.com" target="_blank" class="social-icon">
+          <a href="https://github.com/TshifhunguCodes" target="_blank" class="social-icon">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com" target="_blank" class="social-icon">
+          <a href="https://www.linkedin.com/in/tshifhungu-jonathan-matsheketsheke-859a32316/" target="_blank" class="social-icon">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="mailto:tshifhungujnr825@gmai.com" class="social-icon">
+          <a href="mailto:tshifhungujnr825@gmail.com" class="social-icon">
             <i class="fas fa-envelope"></i>
           </a>
-          <a href="#" class="social-icon">
-            <i class="fab fa-twitter"></i>
+          <a href="experience.html" class="social-icon">
+            <i class="fas fa-certificate"></i>
           </a>
         </div>
         <p class="copyright">&copy; 2025 Tshifhungu Matsheketsheke. All rights reserved.</p>
